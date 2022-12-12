@@ -72,15 +72,16 @@ const panel5 = new IntersectionObserver(entries => {
 });
 panel5.observe(document.querySelector('.color-banner'));
 
+const priceBanner = document.querySelector('.price-card')
 // Create the observer, same as before:
 const price = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      firstBox.classList.add('first-rect-animation');
+      priceBanner.classList.add('price-card-transition');
 
       return;
     }
-    firstBox.classList.remove('first-rect-animation');
+    priceBanner.classList.remove('price-card-transition');
   });
 });
-price.observe(document.querySelector('.price'));
+price.observe(document.querySelector('.price-card'));
