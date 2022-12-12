@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <title>XPhone</title>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header navbar-center">
+        <a class="navbar-brand" href="./index.html">XPhone</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="jumbotron">
+      <h1>Customize Your Phone</h1>
+      <p>Create the phone that best suits you.</p>
+    </div>
+  </div>
+
+  <div class="panels">
+    <div class="row">
+      <div class="col-sm-12 col-md-4">
+        <img id="logo-img" src="./images/color-grey.png">
+      </div>
+      <div class="col-sm-12 col-md-8 text-center">
+        <h1>Choose Color</h1>
+        <hr>
+        <form class="card prevent-select">
+          <label class="radio">
+            <input type="radio" name="optcolor" onchange="changeGrey()">Slate Grey
+          </label>
+          <label class="radio">
+            <input type="radio" name="optcolor" onchange="changeRed()">Magma Red
+          </label>
+          <label class="radio">
+            <input type="radio" name="optcolor" onchange="changeBlue()">Royal Blue
+          </label>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="storage-options" class="panels" style="pointer-events: none; opacity: 0.4;">
+    <div class="row">
+      <div class="col-sm-12 col-md-4 text-center">
+        <span class="glyphicon glyphicon-hdd storage"></span>
+      </div>
+      <div class="col-sm-12 col-md-8 text-center">
+        <h1>Storage Configuration</h1>
+        <hr>
+        <form class="card prevent-select">
+          <label class="radio">
+              <input type="radio" name="optcolor" onchange="add64GB()">
+              64 GB</label>
+            <label class="radio">
+              <input type="radio" name="optcolor" onchange="add256GB()">
+              256 GB <span style="color: grey;">+$99.99</span></label>
+            <label class="radio">
+              <input type="radio" name="optcolor" onchange="add512GB()">
+              512 GB <span style="color: grey;">+$169.99</span></label>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="warranty" class="panels" style="pointer-events: none; opacity: 0.4;">
+    <div class="row">
+      <div class="col-sm-12 col-md-4 text-center">
+        <span class="glyphicon glyphicon-cog service"></span>
+        <h1>XPhone iCare</h1>
+        <h6>Warranty Services</h6>
+      </div>
+      <div class="col-sm-12 col-md-8 card">
+       <div>
+        <h2>We get it. Accidents happen.</h2>
+        <p>XPhone's iCare Warranty provides state of the art servicing and repair for all your needs free of charge.</p>
+        <table class="table" style="margin-top: 5%">
+          <thead>
+            <tr>
+              <th>What's Covered<span class="glyphicon glyphicon-ok checkmark" style="font-size: 2rem;"></span></th>
+              <th>What isn't Covered<span class="glyphicon glyphicon-remove exclusion" style="font-size: 2rem;"></span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Damage from Spills</td>
+              <td>Lost/Stolen Phones</td>
+            </tr>
+            <tr>
+              <td>Damage from Drops</td>
+              <td>Hacked Phones</td>
+            </tr>
+            <tr>
+              <td>Software Corruption</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="card">
+          <form>
+            <div class="checkbox prevent-select">
+              <label><input id="warranty-sub" type="checkbox" onclick="addWarranty()">Add Warranty Protection 
+                <span style="color: grey;"> +$99.99</span>
+              </label>
+            </div>
+          </form>
+        </div>
+       </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="totals" class="panels" style="pointer-events: none; display: none;">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <h2>Package Contents</h2>
+        <hr>
+        <div class="contents">
+          <p><small>1x</small> XPhone</p>
+          <p><small>1x</small> USB-C Charging Cable</p>
+          <p><small>1x</small> Wired Earbuds</p>
+          <p><small>1x</small> Fast-charging Power Brick</p>
+        </div>
+      </div>
+      <div class="col-xs-12 text-center">
+        <h2>Total</h2>
+        <p id="total-price" style="font-size: 3.5rem;">$299.99</p>
+        <small>Includes Taxes</small>
+      </div>
+    </div>
+  </div>
+  <div id="billing" style="pointer-events: none; display: none;">
+    <div class="panels container">
+      <div class="panel panel-primary">
+        <div class="panel-heading billing">Billing and Payment
+          <p>Secure<span class="glyphicon glyphicon-lock secure"></span></p>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-xs-12 col-md-6 contact-info">
+              <h5>Contact Information</h5>
+                <form> 
+                  <div class="row">
+                    <div class="form-group col-md-4">
+                      <label class="sr-only" for="fname"></label>
+                      <input type="fname" class="form-control" id="fname"
+                      placeholder="First Name">
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label class="sr-only" for="lname"></label>
+                      <input type="lname" class="form-control" id="lname" 
+                      placeholder="Last Name">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-md-8">
+                      <label class="sr-only" for="email"></label>
+                      <input type="email" class="form-control" id="lname" 
+                      placeholder="Email Address">
+                    </div>
+                  </div>
+                </form>
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <h5>Credit/Debit Card</h5>   
+                <form>
+                  <div class="row">
+                    <div class="form-group col-md-8">
+                      <label class="sr-only" for="fname"></label>
+                      <input type="name" class="form-control" id="name"
+                      placeholder="Full Name">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-md-8">
+                      <label class="sr-only" for="ccard"></label>
+                      <input type="ccard" class="form-control" id="ccard"
+                      placeholder="Card Number" maxlength="16">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-md-4">
+                      <label class="sr-only" for="code"></label>
+                      <input type="code" class="form-control" id="code"
+                      placeholder="000" maxlength="3">
+                      <p>Security Code</p>
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label class="sr-only" for="expiry"></label>
+                      <input type="expiry" class="form-control" id="expiry" 
+                      placeholder="mm/yy" maxlength="5">
+                      <p>Expiration</p>
+                    </div>
+                  </div>
+                </form>  
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-md-6 contact-info">
+              <h5>Billing Address</h5>
+                <form> 
+                  <div class="row">
+                    <div class="form-group col-md-8">
+                      <label class="sr-only" for="address"></label>
+                      <input type="address" class="form-control" id="address"
+                      placeholder="Street Address">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-md-4">
+                      <label class="sr-only" for="city"></label>
+                      <input type="city" class="form-control" id="city"
+                      placeholder="City">
+                    </div>
+                    <div class="form-group col-md-2">
+                      <label class="sr-only" for="state"></label>
+                      <input type="state" class="form-control" id="state"
+                      placeholder="State">
+                    </div>
+                    <div class="form-group col-md-2">
+                      <label class="sr-only" for="address"></label>
+                      <input type="zip" class="form-control" id="zip"
+                      placeholder="ZIP">
+                    </div>
+                  </div>
+                </form>
+            </div>
+            <div class="col-md-12 bg-light text-right">
+              <form>
+                <a id="purchase-btn" type="button" class="btn btn-default btn-lg" data-toggle="modal" 
+                data-target="#purchase-successful">Place Order</a>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div id="purchase-successful" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!--Content-->
+        <div class="modal-content panels">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Success!</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p>Your order has been placed!</p>
+                <p>Thank you!</p>
+                <div class="modal-footer">
+                    <a href="./index.html" type="button" class="btn btn-default">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  <footer>Bryan Chan All Rights Reserved. 2022</footer>
+    <script src="purchase.js"></script>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <title>XPhone</title>
+</head>
+<body onscroll="scrolling()">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#">XPhone</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="#overview" class="text-center">Overview</a></li>
+              <li><a href="#tech-specs" class="text-center">Tech Specs</a></li>
+              <li class="text-center">
+                <button class="btn btn-info purchase-btn navbar-btn">
+                  <a href="./purchase.html">Purchase</a>
+                  </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="backdrop">
+        <img src="./images/XPhone Snapshot.png" alt="Preview XPhone">
+        <div id="hero-text">
+          <p>XPhone</p>
+          <p>Next gen is here.</p>
+        </div>
+      </div>
+      <div class="panels panel1" id="overview">
+        <div class="row">
+          <div class="col-sm-12 col-md-7">
+            <div class="title-wrapper">
+              <h1 class="title title-transition" style="margin-bottom: 5%">Feel the <b style="color: lightseagreen">Power.</b>
+                <img style="width: 10%"src="./images/battery-charging.gif"></h1>  
+                <hr>
+              </div>
+              <p class="panel-text">The new XPhone is powered by the latest gen microprocessor by ANN Technologies®. Operating at 1.7GHz, this chip is designed to handle the 
+                toughest of tasks while still keeping your phone cool and quiet.  
+              </p>
+              <p class="panel-text">Battery life too is no concern, as the XPhone's battery offers up to 2400mAh of charge. Combined with XPhone's X-Mode, a feature
+                focused on resource allocation and task management, ensures that the battery will get the most of its full potential. 
+              </p>
+            </div>
+            <div class="col-sm-12 col-md-5">
+              <div class="wrapper-logo">
+                <img id="logo-img" src="./images/ANN_technologies.gif">
+                <div id="logo">
+                  <h3>ANN Technologies</h3>
+                  <h2>B4 Chip</h2>
+                </div>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </div>
+
+      <div class="panels panel2">
+        <div class="title2-wrapper">
+          <h1 class="title2 title2-transition text-center">Snapshot Memories</h1>
+          <hr/>
+        </div>
+        <p class="panel-text">Xphone's IRIS Camera is like no other. Offering dual, ultra-wide cameras which capture 1080p resolution images and 
+          can record videos up to 60 frames per second. The flash has also been optimized for adjusting its brightness based on the current light setting.
+          Let XPhone capture your memories. 
+        </p>
+        <div class="wrapper-logo">
+          <img class="camera" src="./images/camera.png">
+          <div class="watermark">
+            <p>X</p>
+            <p>P</p>
+            <p>H</p>
+            <p>O</p>
+            <p>N</p>
+            <p>E</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panels panel3">
+        <div class="row">
+          <div class="col-sm-12 col-md-7">
+            <div class="title3-wrapper" style="margin-bottom: 5%">
+              <h1 class="durable-header">Elegant</h1>
+              <h1 class="and-header">&nbsp; and</h1>
+              <h1 class="rugged-header">&nbsp; Durable</h1>
+            </div>
+            <hr/>
+            <p class="panel-text">Made from a polycarbonate and aluminium alloy for its frame. The XPhone is ready 
+              for whatever life throws at you. Literally.
+            </p>
+            <p class="panel-text">Premium glass covers most of the face of the phone and offers a scratch-resistent, smooth touchscreen
+              experience.
+            </p>
+            <p class="panel-text">This phone is shock resistant and can withstand drops up to 3ft without damage to the 
+              frame itself.
+            </p>
+          </div>
+          <div class="corner-img col-sm-12 col-md-5 text-center">
+            <img src="./images/XPhone Top Quarter_Rev.png">
+          </div>
+        </div>
+      </div>
+
+      <div class="panels panel3">
+        <div class="row">
+          <div class="corner-img col-sm-12 col-md-5 text-center">
+            <img src="./images/XPhone Back Quarter.png">
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="audio-wrapper">
+              <h1>Enhanced Audio</h1>
+                <div class="playing">
+                  <span class="playing__bar playing__bar1"></span>
+                  <span class="playing__bar playing__bar2"></span>
+                  <span class="playing__bar playing__bar3"></span>
+                </div>
+            </div>
+            <hr/>
+            <p class="panel-text">XPhone delivers clear, crisp sound with a huge range of bass and treble levels.</p>
+            <p class="panel-text">Two speakers located at the bottom can dynamically adjust audio levels to best fit the 
+              type of sound application the phone is using, offering an experience one won't forget.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panels panel4">
+        <div class="row">
+          <div class="col-sm-12 col-md-7">
+            <h1>Watertight Fittings</h1>
+            <hr/>
+            <p class="panel-text">Splash resistent, Check.
+            </p>
+            <p class="panel-text">Waterproof, Check.
+            </p>
+            <p class="panel-text">Dishwasher Safe? Check.
+            </p>
+            <p class="panel-text">This phone can go wherever you go.
+            </p>
+          </div>
+          <div class="corner-img col-sm-12 col-md-5 text-center">
+            <img src="./images/WaterProof XPhone.png">
+          </div>
+        </div>
+      </div>
+      <div class="panels">
+        <h1 class="text-center">360&#xb0; Model View</h1>
+        <hr/>
+      <div class="row">
+        <div class="col-sm-12 col-md-3 text-center">
+          <div class="large-text panel-text">
+            <h1 style="color: #375BDB;">Beautiful</h1>
+            <h1 style="color: #499BF2;">Timeless</h1>
+            <h1 style="color: #37B2DB;">Design.</h1>
+          </div>
+        </div>
+        <div class="slider-container col-md-12 col-md-6">
+          <img class="img-360" src="./images/360/7.png">
+          <input type="range" min="0" max="14" value="7" class="slider" id="viewing-angle">
+          <h6 class="panel-text">Scroll me!</h6>
+        </div>
+          <div class="col-sm-12 col-md-3"></div>
+        </div>
+      </div>
+
+      <div class="panels color-banner">
+        <div class="first-rect">
+          <h1 class="text-center">Splash</h1>
+        </div>
+        <div class="second-rect">
+          <h1 class="text-center">Some</h1>
+        </div>
+        <div class="third-rect">
+          <h1 class="text-center">Color</h1>
+        </div>
+        <div class="color-title color-title-animation">
+          <h1>Customize Your Look.</h1>
+          <hr>
+        </div>
+      </div>
+      <div class="panels color-selection">
+        <div class="row">
+          <div class="col-sm-12 col-md-4 text-center">
+            <img src="./images/color-red.png">
+            <div class="color-choice">
+              <span class="dot" style="background: rgba(211, 16, 16, 0.849)"></span>
+              <span>Magma Red</span>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 text-center">
+            <img src="./images/color-blue.png">
+            <div class="color-choice">
+              <span class="dot" style="background: rgb(3, 82, 185)"></span>
+              <span>Royal Blue</span>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 text-center">
+            <img src="./images/color-grey.png">
+            <div class="color-choice">
+              <span class="dot" style="background: rgb(39, 39, 39)"></span>
+              <span>Slate Grey</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panels" id="tech-specs">
+        <h1 class="text-center">Technical Specifications</h1>
+        <hr style="margin-bottom: 5%">
+        <h4 class="labels">Hardware</h4>
+          <div class="row text-center label-border">
+            <div class="col-xs-12 col-md-3">
+              <span class="glyphicon glyphicon-phone"></span>
+              <h2>Display</h2>
+              <p>5.6 inch LED ultra-widescreen display</p>
+            </div>
+            <div class="col-xs-12 col-md-3">
+              <span class="glyphicon glyphicon-tasks"></span>
+              <h2>Processing Chip</h2>
+              <p>BRICK7 Ion chip at 1.7GHz</p>
+              <p>8-core CPU - 4 eco cores</p>
+              <p>4-core GPU with TurboMax</p>
+            </div>
+            <div class="col-xs-12 col-md-3">
+              <span class="glyphicon glyphicon-hdd"></span>
+              <h2>Storage</h2>
+              <p>64GB</p>
+              <p>256GB</p>
+              <p>512GB</p>
+            </div>
+            <div class="col-xs-12 col-md-3">
+              <span class="glyphicon glyphicon-object-align-left"></span>
+              <h2>Battery</h2>
+              <p>2400mAh Lithum-ion Battery</p>
+              <p>Rapid-Charging</p>
+              <p>Wireless Charging Capability</p>
+              <p>76.4 hour Battery Life</p>
+            </div>
+          </div>
+
+          <h4 class="labels">Dimensions</h4>
+          <div class="row text-center label-border">
+            <div class="col-xs-12 col-md-6">
+              <p class="glyphicon glyphicon-resize-full"></p>
+              <h2>Size</h2>
+              <p>Length: 6.7 inches</p>
+              <p>Width: 4.5 inches</p>
+              <p>Depth: 0.2 inches</p>
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <p class="glyphicon glyphicon-object-align-bottom"></p>
+              <h2>Weight</h2>
+              <p>121 grams (4.26 ounces)</p>
+            </div>
+          </div>
+
+          <h4 class="labels">Ports</h4>
+          <div class="row text-center label-border">
+            <div class="col-xs-12 col-md-6">
+              <p class="glyphicon glyphicon-flash"></p>
+              <h2>Charging</h2>
+              <p>1x USB-C Connector</p>
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <p class="glyphicon glyphicon-sound-stereo"></p>
+              <h2>Audio</h2>
+              <p>3.5mm Audio Port</p>
+            </div>
+          </div>
+
+          <h4 class="labels">Camera</h4>
+          <div class="row text-center label-border">
+            <div class="col-xs-12 col-md-4">
+              <p class="glyphicon glyphicon-camera"></p>
+              <h2>Lens</h2>
+              <p>1x 16MB High-res Main Camera</p>
+              <p>1x 16MB Camera with Nano-vision Technology</p>
+              <p>Snapshot Response</p>
+              <p>Auto-focus True View Lens</p>
+              <p>Enhanced Portrait and Landscape Mode</p>
+              <p>Dual Sonic Flash</p>
+            </div>
+            <div class="col-xs-12 col-md-4">
+              <p class="glyphicon glyphicon-facetime-video"></p>
+              <h2>Video</h2>
+              <p>60fps 4K Video Recording</p>
+              <p>Timelapse Capability</p>
+              <p>Auto-stabilization and Lighting</p>
+              <p>Clear Mode Night Vision</p>
+              <p>Fast View Panoramic Sampling</p>
+            </div>
+            <div class="col-xs-12 col-md-4">
+              <p class="glyphicon glyphicon-picture"></p>
+              <h2>Image Quality</h2>
+              <p>720P 1080P 4K Images</p>
+              <p>QuickStorage Optimization</p>
+              <p>Enhanced Photo Editor</p>
+              <p>Geo-Sense Tagging</p>
+            </div>
+          </div>
+
+          <h4 class="labels">Nice to Have's</h4>
+          <div class="row text-center label-border">
+            <div class="col-xs-12 col-md-3">
+              <p class="glyphicon glyphicon-volume-up"></p>
+              <p>Crisp Voice Calling</p>
+              <p>Boom XTreme Audio Projection</p>
+            </div>
+            <div class="col-xs-12 col-md-3">
+              <p class="glyphicon glyphicon-signal"></p>
+              <p>Wi-fi 6 Integration</p>
+              <p>Unlimited Bandwidth Potential</p>
+            </div>
+            <div class="col-xs-12 col-md-3">
+              <p class="glyphicon glyphicon-tint"></p>
+              <p>Splash Proof</p>
+              <p>Shock Proof</p>
+              <p>Water Resistent</p>
+              <p>Hardened TouchScreen with a Anti-Scratch Coating</p>
+            </div>
+            <div class="col-xs-12 col-md-3">
+              <p class="glyphicon glyphicon-th-large"></p>
+              <p>Accelerometer</p>
+              <p>Quad-motion Gyroscrope</p>
+              <p>Pedometer</p>
+              <p>Proximity Sensor</p>
+              <p>Light Sensor</p>
+            </div>
+          </div>
+      </div>
+
+      <div class="panels">
+        <div class="row">
+          <div class="price-card">
+            <a href="./purchase.html" style="text-decoration: none; color:inherit">
+              <div class="logo">
+                <h4>X P H O N E</h4>
+              </div>
+              <div id="page-offer">
+                <h4>Starting at <span>$299</span></h4>
+                <h4>Get Yours Today.</h4>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <footer>Bryan Chan All Rights Reserved. 2022</footer>
+      <script src="scroll.js"></script>
+      <script src="animations.js"></script>
+      <script src="view360.js"></script>
+</body>
+</html>
